@@ -5,15 +5,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body{
     background: #ffffff;
     background-image: url(./media/fondo.jpg);
+    position: relative;
+    padding-bottom: 80px;
+    min-height: 100vh;
 }
-
-/*HEADER*/
 
 header{
     height: 120px;
@@ -47,7 +48,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 
@@ -73,14 +74,31 @@ header{
 }
 
 .menu nav ul li a{
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     color: #000;
     transition: opacity 300ms; 
+    position: relative;
 }
 
-.menu nav ul li a:hover{
+.menu nav ul li a:after{
     opacity: 0.4;
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #68249f;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu nav ul li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .header__register,
@@ -121,12 +139,12 @@ header{
 
 #ctn-icon-search{
     position:absolute;
-    right: 50px;
+    right: 55px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
 }
 
 
@@ -178,7 +196,7 @@ header{
 #box-search li a{
    display: block;
    width: 100%;
-   color: #5b5b5b;
+   color: #000000;
    padding: 12px, 20px;
    text-decoration: none;
    height: 30px;
@@ -277,13 +295,13 @@ section{
 /*BANNER*/
 
 .container__banner{
-    margin-top: 80px;
+    margin-top: 50px;
     max-width: 100%;
 }
 
 .banner{
-    height: 250px;
-    padding-left: 60px;
+    height: 290px;
+    margin-left: 0px;
     display: flex;
     align-items: center;
     background: #1b1b1b;
@@ -423,17 +441,19 @@ section{
     }
 
 
-    .mostrar_menu{ 
+    .mostrar_menu{ /*CLASE MANIPULADA POR JS*/
         height: 235px;
     }
 
     .text__information-cover h1{
-        font-size: 50px;
+        text-align: center;
+        font-size: 60px;
         font-family: 'Prompt', sans-serif;
     }
 
     .text__information-cover p{
-        font-size: 18px;
+        text-align: center;
+        font-size: 20px;
         font-family: 'Prompt', sans-serif;
     }
 
@@ -466,6 +486,9 @@ section{
     .buttons__cover{
         display:flex;
         margin-left:0;
+    }
+    .footer{
+        margin-top: 50px;
     }
 }
 
@@ -566,13 +589,34 @@ section{
         background: #1b1b1b;
         position: relative;
     }
+    .footer{
+        position: relative;
+        top: 0px;
+    }
+
+
 }
+
+@media (max-width: 881.11px){
+    .footer{
+        margin-top: 120px;
+    }
+}
+
+
+
+
 
 /*ACA VA EL CSS DEL FOOTER*/
 
 .footer{
-    padding: 40px 0;
+    padding: 40px 0px;
     background-color: #fff;
+    position: relative;
+    bottom:0;
+    width: 100%;
+    height: 200px;
+    margin-top: auto;
 }
 
 .footer .social{
@@ -629,4 +673,15 @@ section{
     text-align: center;
     font-size: 13px;
     color: #aaa;
+}
+
+@media (max-width: 920px){
+
+    .banner__icon-heart{
+       padding-left: 40px;
+    }
+
+    .footer{
+        margin-top: 600px;
+    }
 }
