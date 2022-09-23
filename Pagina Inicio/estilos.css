@@ -26,8 +26,7 @@ header{
     box-shadow: 0 10px 25px -22px black;
     z-index: 10;
     bottom: 35px;
-    background-color: #f0efef;
-    
+    background-color: #f0efef;   
 }
 
 .container__header{
