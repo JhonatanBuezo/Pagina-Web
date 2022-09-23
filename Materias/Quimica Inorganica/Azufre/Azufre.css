@@ -10,7 +10,7 @@
 
 body{
     background: #dbd9d9;
-    background-image: url("media/fondo.jpg");
+    background-image: url(./media/fondo.jpg);
 }
 
 /*HEADER*/
