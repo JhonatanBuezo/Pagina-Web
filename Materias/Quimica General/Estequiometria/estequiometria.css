@@ -420,6 +420,16 @@ header{
     margin-top: 10px;
 }
 
+.blog-list-1{
+    list-style-type: none;
+    padding-left: 35px;
+}
+
+.blog-list-2{
+    list-style-type: none;
+    padding-left: 35px;
+}
+
 .side-content{
     font-size: .9em;
     margin-top: 8px;
@@ -465,6 +475,25 @@ header{
     padding-left: 5px;
     color: #9c9c9c;
     opacity: 90%;
+}
+
+
+.side-list{
+    font-size: 1.0em;
+    list-style-type: none;
+    list-style: none;
+    text-align: center;
+    padding-top: 6.5px;
+}
+
+.side-list a{
+    color: #000;
+    text-decoration: none;
+}
+
+.side-list a:hover{
+    color: #c180f7;
+    cursor: pointer;
 }
 
 .Tema-1{
